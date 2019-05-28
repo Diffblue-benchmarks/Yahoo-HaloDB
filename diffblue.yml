@@ -173,16 +173,21 @@ phases:
       # instrument the file as opposed to the function only
       cover-only: file
 units:
- - target:
-   - dir: target/classes
-     file: com/oath/halodb/Hasher$Murmur3Hash.class
-     sourceDir: src/main/java
-     sourceFile: com/oath/halodb/Hasher.java
-   - dir: target/classes
-     file: com/oath/halodb/Hasher.class
-     sourceDir: src/main/java
-     sourceFile: com/oath/halodb/Hasher.java
-   - dir: target/classes
-     file: com/oath/halodb/Uns.class
-     sourceDir: src/main/java
-     sourceFile: com/oath/halodb/Uns.java
+  # Target Coverage: Unknown %
+  - target:
+    - dir: target/classes
+      file: com/oath/halodb/OffHeapHashTableStats.class
+      sourceDir: src/main/java
+      sourceFile: com/oath/halodb/OffHeapHashTableStats.java
+    # Child of OffHeapHashTableStats.class
+    # Child Coverage: Unknown %
+    - dir: target/classes
+      file: com/oath/halodb/SegmentStats.class
+      sourceDir: src/main/java
+      sourceFile: com/oath/halodb/SegmentStats.java
+        # Target Coverage: Unknown %
+  - target:
+    - dir: target/classes
+      file: com/oath/halodb/histo/EstimatedHistogram.class
+      sourceDir: src/main/java
+      sourceFile: com/oath/halodb/histo/EstimatedHistogram.java
